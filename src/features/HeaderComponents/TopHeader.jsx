@@ -4,7 +4,7 @@ import DarkModeToggle from "../../ui/DarkModeToggle";
 import Menu from "./Menu";
 import { Link } from "react-router-dom";
 import useCart from "../../hooks/useCart";
-import Backdrop from "../../ui/BackDrop";
+import Backdrop from "../../ui/Backdrop";
 import { HiSquares2X2 } from "react-icons/hi2";
 import useProduct from "../Product/useProduct";
 

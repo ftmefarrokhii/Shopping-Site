@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MdOutlineSearch , MdShoppingCart} from "react-icons/md";
-import DarkModeToggle from "../../ui/DarkmodeToggle";
+import DarkModeToggle from "../../ui/DarkModeToggle";
 import Menu from "./Menu";
 import { Link } from "react-router-dom";
 import useCart from "../../hooks/useCart";

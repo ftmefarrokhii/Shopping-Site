@@ -1,16 +1,9 @@
 import mobileBanner from "../../assets/bannerMobile.webp";
-import mobileBannerinMobile from "../../assets/phonesBannerInMobile.jpg";
 import consoleBanner from "../../assets/bannerConsole.webp";
-import consoleBannerInMobile from "../../assets/consolesBannerInMobile.jpg";
-import airpodsBanner from "../../assets/bannerAirpods.webp";
-import airpodsBannerInMobile from "../../assets/headphonesBannerInMobile.jpg";
 import airpodsBanner2 from "../../assets/bannerAirpods2.webp";
 import digitalWatchBanner from "../../assets/bannerDigitalWatch.webp";
-import digitalWatchBannerInMobile from "../../assets/digitalWatchesBannerInMobile.jpg";
 import speakerBanner from "../../assets/bannerSpeaker.webp";
-import speakerBannerInMobile from "../../assets/speakersBannerInMobile.jpg";
 import tabletBanner from "../../assets/bannerTablet.webp";
-import laptopsBannerInMobile from "../../assets/laptopsBannerInMobile.jpg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useRef, useState } from "react";
 import { useEffect } from "react";
@@ -43,57 +36,45 @@ const desktopSlides = [
     src: speakerBanner,
     link: "/categories/speakers",
   },
-  {
-    id: 7,
-    src: airpodsBanner,
-    link: "/categories/headphones",
-  },
 ];
-const mobileSlides = [
-  {
-    id: 2,
-    src: mobileBannerinMobile,
-    link: "/categories/phones",
-  },
-  {
-    id: 1,
-    src: consoleBannerInMobile,
-    link: "/categories/consoles",
-  },
-  {
-    id: 3,
-    src: airpodsBannerInMobile,
-    link: "/categories/headphones",
-  },
-  {
-    id: 4,
-    src: digitalWatchBannerInMobile,
-    link: "/categories/digitalWatches",
-  },
-  {
-    id: 5,
-    src: speakerBannerInMobile,
-    link: "/categories/speakers",
-  },
-  {
-    id: 6,
-    src: laptopsBannerInMobile,
-    link: "/categories/laptops",
-  },
-];
+//   {
+//     id: 2,
+//     src: mobileBannerinMobile,
+//     link: "/categories/phones",
+//   },
+//   {
+//     id: 1,
+//     src: consoleBannerInMobile,
+//     link: "/categories/consoles",
+//   },
+//   {
+//     id: 3,
+//     src: airpodsBannerInMobile,
+//     link: "/categories/headphones",
+//   },
+//   {
+//     id: 4,
+//     src: digitalWatchBannerInMobile,
+//     link: "/categories/digitalWatches",
+//   },
+//   {
+//     id: 5,
+//     src: speakerBannerInMobile,
+//     link: "/categories/speakers",
+//   },
+//   {
+//     id: 6,
+//     src: laptopsBannerInMobile,
+//     link: "/categories/laptops",
+//   },
+// ];
 const Slider = () => {
-  const [slides, setSlides] = useState(0);
+  const [slides, setSlides] = useState(desktopSlides);
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(1);
   const timerTimeout = useRef();
   const [touchPosition, setTouchPosition] = useState(0);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (window.innerWidth < 1024) setSlides(mobileSlides);
-      else setSlides(desktopSlides);
-    }, 1500);
-  }, []);
   useEffect(() => {
     const autoSlideChanger = () => {
       clearTimeout(timerTimeout.current);

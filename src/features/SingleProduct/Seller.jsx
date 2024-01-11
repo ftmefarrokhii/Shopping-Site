@@ -3,7 +3,7 @@ import { BsShop } from "react-icons/bs";
 import { DiCodeigniter } from "react-icons/di";
 import { FaRibbon } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import fastSubmit from "../../assets/esraleSari.png";
+import fastSubmit from "../../assets/esraleSari.webp";
 import useCart from "../../hooks/useCart";
 import useAddToCart from "../Cart/useAddToCart";
 import useUpdateProduct from "../Cart/useUpdateProduct";

@@ -5,9 +5,8 @@ const  ThemeContext  =  createContext();
 
 export default function ThemeProvider({children}){
     const [isDarkMode,setIsDarkMode] =  useLocalStorage(
-        "isDarkMode" , 
-        // false
-        window.matchMedia("(prefers-color-scheme : dark)").matches
+        "isDarkMode" , false
+        // window.matchMedia("(prefers-color-scheme : dark)").matches
     )
     
     const ToggleDarkMode = ()=>{

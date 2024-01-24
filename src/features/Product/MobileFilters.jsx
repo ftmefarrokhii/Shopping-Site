@@ -18,10 +18,10 @@ export default function MobileFilters(){
     const navlinkClass = "flex justify-between rounded-md p-2 text-black transition-all duration-300"
 
     const filtersOption = filters?.[category === "phones" ? 0 : category === "tablets" ? 1 : category === "laptops" ? 2 : category === "consoles" ? 3 : category === "headphones" ? 4 : category === "digitalWatches" ? 5 : category === "speakers" ? 6 : ""][category]
-    console.log("filtersOption" , filtersOption);
+    // console.log("filtersOption" , filtersOption);
 
     const [searchParams, setSearchParams] = useSearchParams();
-    console.log("searchParams" ,searchParams);
+    // console.log("searchParams" ,searchParams);
 
     const serializeFormQuery = () => {
         const allParams = {};
@@ -103,7 +103,7 @@ export default function MobileFilters(){
                     
                     
                     {filtersOption && filtersOption?.map((filterOpt)=>(
-                    <div className="flex w-full flex-col overflow-hidden rounded-lg bg-gray-100 px-4 py-2 text-base dark:bg-gray-600">
+                    <div key={filterOpt.key} className="flex w-full flex-col overflow-hidden rounded-lg bg-gray-100 px-4 py-2 text-base dark:bg-gray-600">
                         <span className="flex items-center justify-between cursor-pointer"
                             onClick={() => toggleShowFilterOptionHandler(filterOpt.key)}
                         >

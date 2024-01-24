@@ -45,7 +45,7 @@ export default function TopHeader(){
                 
                 <Menu />
                 <div>  
-                    <img src="../src/assets/logo2.svg" className="hidden dark:block w-20 md:w-40" alt="" />  {/* logo for dark theme*/}
+                    <img src="../src/assets/logo2.svg" className="hidden dark:block w-20 md:w-40" alt="" /> 
                     <img src="../src/assets/logo.svg" className="dark:hidden w-20 md:w-40 " alt="" />
                 </div>
 
@@ -101,11 +101,6 @@ export default function TopHeader(){
                 </Link>
 
                 )}
-
-
-                 
-                
-
             </div>
 
             <div className="flex justify-between items-center ml-2 mr-2 lg:gap-6  gap-x-10">

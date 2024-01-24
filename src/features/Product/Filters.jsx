@@ -11,10 +11,10 @@ const Filters = () => {
     const {isLoading ,filters } = useFilters()
 
     const filtersOption = filters?.[category === "phones" ? 0 : category === "tablets" ? 1 : category === "laptops" ? 2 : category === "consoles" ? 3 : category === "headphones" ? 4 : category === "digitalWatches" ? 5 : category === "speakers" ? 6 : ""][category]
-    console.log("filtersOption" , filtersOption);
+    // console.log("filtersOption" , filtersOption);
 
     const [searchParams, setSearchParams] = useSearchParams();
-    console.log("searchParams" ,searchParams);
+    // console.log("searchParams" ,searchParams);
 
     const serializeFormQuery = () => {
         const allParams = {};

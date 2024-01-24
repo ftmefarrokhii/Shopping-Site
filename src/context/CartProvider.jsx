@@ -18,7 +18,7 @@ export default function CartProvider({children}){
             price : product.price,
             imageURL : product.imageURL
         }
-        console.log("newCartItem",newCartItem);
+        // console.log("newCartItem",newCartItem);
         addToCart(newCartItem , { 
             onSuccess : (data) => {  
                 console.log("dataadd shode", data);
@@ -39,7 +39,7 @@ export default function CartProvider({children}){
             id : product.id,
             quantity : product.quantity + 1
         }
-        console.log("updated quantity" , updatedProduct);
+        // console.log("updated quantity" , updatedProduct);
 
         updateProduct({id,updatedProduct},{
             onSuccess : ()=> {console.log("success increment")}

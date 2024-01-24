@@ -8,7 +8,7 @@ export default function useUpdateProduct(){
     const {isPending : isUpdatingProduct, mutate : updateProduct} = useMutation({
         mutationFn : updateProductApi , 
         onSuccess : (data)=>{
-            console.log("decrement or increment success",data);
+            // console.log("decrement or increment success",data);
             toast.success(data.message)
 
             queryClient.invalidateQueries({  

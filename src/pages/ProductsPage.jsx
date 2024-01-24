@@ -13,7 +13,7 @@ export default function ProductsPage(){
     let filtered;
 
     const queryObject = Object.fromEntries(new URLSearchParams(search))
-    console.log("queryObject",queryObject);
+    // console.log("queryObject",queryObject);
 
     filtered = products?.filter(product => {
         return Object.entries(queryObject).every(([key, value]) => {
